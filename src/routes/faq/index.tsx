@@ -12,7 +12,7 @@ import { CUSTOM_COMPONENTS } from "../../components/builder-registry";
 // Define Builder's public API key and content model.
 export const BUILDER_PUBLIC_API_KEY = process.env.PUBLIC_BUILDER_API_KEY ?? "";
 
-export const BUILDER_MODEL = 'page';
+export const BUILDER_MODEL = 'faqq';
 
 // Define a route loader function that loads
 // content from Builder based on the URL.
@@ -40,7 +40,6 @@ export default component$(() => {
   // and provide the Public API Key
   return (
     <Content
-      canTrack={false}
       model={BUILDER_MODEL}
       content={content.value}
       apiKey={BUILDER_PUBLIC_API_KEY}
